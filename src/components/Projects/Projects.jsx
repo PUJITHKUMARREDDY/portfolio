@@ -145,7 +145,7 @@ export default function Projects() {
               marginBottom:  "0.4rem",
             }}
           >
-            // projects
+            <span>//</span> projects
           </p>
         </Reveal>
 

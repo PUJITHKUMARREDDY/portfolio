@@ -27,7 +27,7 @@ export default function About() {
 
         {/* Section header */}
         <Reveal>
-          <p className="about-sub-label">// about me</p>
+          <p className="about-sub-label"><span>//</span> about me</p>
         </Reveal>
         <Reveal delay={0.05}>
           <h2
