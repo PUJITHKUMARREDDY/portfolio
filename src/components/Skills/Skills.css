@@ -1,0 +1,211 @@
+/* ─── SKILLS SECTION ─────────────────────────────────────────── */
+.skills-section {
+  padding: 100px 5%;
+  background: var(--bg);
+  position: relative;
+  z-index: 1;
+}
+
+.skills-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Skill image icons row ── */
+.skill-images-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.skill-img-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+  animation: fadeUp 0.6s both;
+}
+
+.skill-img-icon:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(56, 189, 248, 0.18);
+}
+
+.skill-img-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.22s;
+}
+
+.skill-img-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* ── Skill groups grid ── */
+.skill-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ── Single skill group card ── */
+.skill-group-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem;
+  transition: border-color 0.22s, transform 0.22s;
+  cursor: default;
+}
+
+.skill-group-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.4rem;
+}
+
+.skill-group-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.skill-group-title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: var(--text);
+}
+
+/* ── Individual skill item ── */
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.skill-item-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.82rem;
+}
+
+.skill-item-name {
+  color: var(--text);
+}
+
+.skill-item-pct {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── Animated progress bar ── */
+.skill-bar-track {
+  height: 4px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  width: 0%;                          /* starts at 0, JS sets to real % */
+  transition: width 1.4s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Learning banner ── */
+.learning-banner {
+  margin-top: 2.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 211, 153, 0.07) 0%,
+    rgba(129, 140, 248, 0.07) 100%
+  );
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: border-color 0.22s;
+}
+
+.learning-banner:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.learning-banner-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+  animation: bounce-soft 3s ease-in-out infinite;
+}
+
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.learning-banner h3 {
+  font-size: 0.97rem;
+  color: #34d399;
+  margin-bottom: 0.4rem;
+}
+
+.learning-banner p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.8rem;
+}
+
+.learning-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.learning-tag:hover {
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .skill-groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-banner {
+    flex-direction: column;
+  }
+}

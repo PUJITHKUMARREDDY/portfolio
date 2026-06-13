@@ -1,0 +1,397 @@
+/* ─── ABOUT SECTION ─────────────────────────────────────────── */
+.about-section {
+  padding: 100px 5%;
+  background: var(--bg2);
+  position: relative;
+  z-index: 1;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+/* ── Info table ── */
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.about-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.88rem;
+  vertical-align: top;
+}
+
+.about-table .td-label {
+  color: var(--text-muted);
+  width: 40%;
+}
+
+.about-table .td-value {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Section label inside about ── */
+.about-sub-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Score bubbles ── */
+.score-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.score-bubble {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  min-width: 90px;
+  transition: border-color 0.22s, transform 0.22s;
+}
+
+.score-bubble:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.score-bubble .score-val {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.score-bubble .score-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* ── Right column ── */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  max-height: 220px;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.12);
+}
+
+/* ── Info box card ── */
+.info-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: border-color 0.22s;
+}
+
+.info-box:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.info-box h3 {
+  font-size: 0.88rem;
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.5px;
+}
+
+.info-box p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.info-box p + p {
+  margin-top: 0.8rem;
+}
+
+/* ── Interest chips ── */
+.interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 0.4rem;
+}
+
+.interest-chip {
+  padding: 5px 13px;
+  border-radius: 100px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text);
+  transition: border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.interest-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Education card ── */
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.22s, transform 0.22s;
+  cursor: default;
+}
+
+.edu-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.edu-card-info .school {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.edu-card-info .degree {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 3px;
+}
+
+.edu-card-score {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.edu-card-score .val {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.edu-card-score .lbl {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* ── Experience card ── */
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.exp-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.exp-card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+
+.exp-card:hover .exp-card-bar {
+  opacity: 1;
+}
+
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.exp-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.exp-company {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.exp-company a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.exp-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.exp-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exp-badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+.exp-meta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.exp-meta span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.exp-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.exp-highlights {
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.exp-highlights li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.exp-tech span {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.67rem;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.exp-tech span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Empty state ── */
+.exp-empty {
+  background: var(--surface);
+  border: 1px dashed rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.exp-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.exp-empty p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.exp-empty a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.exp-empty a:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
