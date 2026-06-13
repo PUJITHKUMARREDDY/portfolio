@@ -96,7 +96,7 @@ export default function Skills() {
               marginBottom:  "0.4rem",
             }}
           >
-            // technical skills
+           {"//"} technical skills
           </p>
         </Reveal>
         <Reveal delay={0.05}>
