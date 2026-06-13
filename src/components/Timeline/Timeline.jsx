@@ -86,7 +86,7 @@ export default function Timeline() {
               marginBottom:  "0.4rem",
             }}
           >
-            <span>//</span> journey
+            <span>{"//"}</span> journey
           </p>
         </Reveal>
 

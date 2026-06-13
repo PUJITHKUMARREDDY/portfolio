@@ -28,7 +28,7 @@ export default function TypingText() {
     minHeight: "1.5em",
   }}
 >
-  <span>// </span>
+  <span>{"//"} </span>
   <span>{text}</span>
   <span
     style={{
