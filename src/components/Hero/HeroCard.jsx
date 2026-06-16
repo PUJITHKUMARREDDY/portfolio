@@ -13,7 +13,7 @@ const STATS = [
   { val: personalInfo.cgpa,  label: "B.Tech CGPA" },
   { val: "3+",               label: "Projects"     },
   { val: "9.7",              label: "SSC GPA"      },
-  { val: "2026",             label: "Graduating"   },
+  { val: "2025",             label: "Graduated"   },
 ];
 
 export default function HeroCard() {
@@ -36,7 +36,7 @@ export default function HeroCard() {
         style={{
           position:   "absolute",
           inset:      0,
-          background: "linear-gradient(135deg,rgba(56,189,248,0.04) 0%,transparent 60%)",
+          background: "linear-gradient(135deg,rgba(31, 31, 36, 0.04) 0%,transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -61,7 +61,7 @@ export default function HeroCard() {
         {personalInfo.initials}
       </div>
 
-      <div style={{ fontWeight: 700, fontSize: "1.05rem" }}>
+      <div style={{ fontWeight: 700, fontSize: "1.05rem",  }}>
         {personalInfo.shortName}
       </div>
       <div style={{ fontSize: "0.8rem", color: "#94a3b8", marginTop: 3 }}>

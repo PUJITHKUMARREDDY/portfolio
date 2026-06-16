@@ -27,11 +27,19 @@ function Experience() {
       </div>
 
       {experiences.map((exp, index) => (
-        <ExperienceCard
-          key={index}
-          experience={exp}
-        />
-      ))}
+  <ExperienceCard
+    key={index}
+    role={exp.role}
+    company={exp.company}
+    location={exp.location}
+    period={exp.duration}
+    description={exp.points.join(" • ")}
+    status="current"
+    type="Full-Time"
+    highlights={exp.points}
+    tech={["Appian"]}
+  />
+))}
 
     </section>
   );

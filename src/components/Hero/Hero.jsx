@@ -3,6 +3,7 @@ import TypingText from "./TypingText";
 import SocialIcon from "./SocialIcon";
 import { personalInfo } from "../../data/about";
 import socialLinks from "../../data/socialLink";
+import  "./Hero.css";
 
 export default function Hero() {
   const scrollToProjects = () =>
@@ -71,7 +72,7 @@ export default function Hero() {
               marginBottom:  "0.2rem",
             }}
           >
-            <span style={{ display: "block", color: "#e2e8f0" }}>
+            <span style={{ display: "block", color: "#226ac8" }}>
               Kalluru Pujith
             </span>
             <span
@@ -98,7 +99,7 @@ export default function Hero() {
               maxWidth:   500,
             }}
           >
-            B.Tech CSE student at RGMCET passionate about building impactful
+            Trainee Software Developement Engineer at IQVIA, and completed B.Tech at RGMCET (CSE),  passionate about building impactful
             software — from dynamic web apps to AI-powered systems. Currently
             diving deep into ML, Gen AI & LLM engineering.
           </p>
